@@ -1,0 +1,81 @@
+:root {
+    /* Define color variables */
+    --header-bg-color: #0074D9;
+    --header-text-color: white;
+    --button-bg-color: #FF4136;
+    --button-text-color: white;
+    --table-border-color: #ddd;
+    --table-row-even-bg-color: #d4d4d4;
+}
+
+/* Apply styles to the header */
+header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Style the buttons */
+button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid var(--table-border-color);
+    padding: 0.5rem;
+    text-align: left;
+}
+
+/* Alternate row colors */
+tr:nth-child(even) {
+    background-color: var(--table-row-even-bg-color);
+}
+/* Responsive styles for mobile view */
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid var(--table-border-color);
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}

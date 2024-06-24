@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/CSS/style.css">
+    <title>Employee Payroll Tracker</title>
+    <link rel="stylesheet" href="/assets/CSS/style.css"> 
 </head>
 <body>
-    
-    <script src="/assets/JavaScript/script.js"></script>
+    <header>
+        <h1 id="mainHeading">
+            Employee Payroll Tracker
+        </h1>
+    </header>
+    <button id="addDataButton">Add Employee</button> 
+    <button id="removeRecentData">Remove Last Listed Employee</button>
+    <button id="employeeDrawButton">Draw Random Employee (Console)</button>
+    <table id="employeeDataTable">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody id="employeeTableBody">
+
+        </tbody>
+    </table>
+    <p>*note: Save and load functionality in progress</p>
+    <script src="assets/JavaScript/script.js"></script>
 </body>
 </html>
