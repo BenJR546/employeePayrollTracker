@@ -77,3 +77,27 @@ document.getElementById('employeeDrawButton').addEventListener('click', () => {
     // Log a congratulatory message for the selected employee
     console.log(`Congratulations to ${randomEmployee.firstName} ${randomEmployee.lastName} for winning today's draw!`);
 });
+
+// Event Listener for the 'Save' button
+document.getElementById('saveButton').addEventListener('click', () => {
+    // Save the employee data to local storage
+    localStorage.setItem('employeesData', JSON.stringify(employees));
+    // Log a message to the console to confirm save
+    console.log('Employee Data Saved');
+});
+
+// Event Listener for the 'Load' button
+document.getElementById('loadButton').addEventListener('click', () => {
+    // Find and parse employee data from local storage
+    const loadedData = localStorage.getItem('employeesData');
+    if (loadedData) {
+        // Clear the current array
+        employees.length = 0;
+        // Concatenate the loaded data into the employees array
+        Array.prototype.push.apply(employees, JSON.parse(loadedData));
+        displayEmployeeData();
+        console.log('Employee Data Loaded');
+    } else {
+        console.log('No Employee Data to Load');
+    }
+});
