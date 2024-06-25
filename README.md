@@ -54,7 +54,6 @@ N/A
 
 ## Future Plans
 * Save and Load Feature
-    - I'm currently researching a few methods for this, right now I'm settling on either a profile login, or a "seed" file that can be downloaded and reuploaded to the site to show the data. This way all private data is stored locally, and the software can be used offline.
 * CSS Styling to improve UI
 * Tweaks to Javascript to improve Edge-case functionality and console display
 
