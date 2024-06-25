@@ -3,14 +3,14 @@ const employees = [];
 
 // Event listener for the 'Add Data' button
 document.getElementById('addDataButton').addEventListener('click', () => {
-    // Prompt user for employee details
-    const firstName = window.prompt('Enter First Name:');
-    const lastName = window.prompt('Enter Last Name:');
-    const salary = parseFloat(window.prompt('Enter Salary:'));
-    // If salary is not a number, set it to 0
-        if (isNaN(salary)) {
-            salary = 0;
-    }
+   // Prompt user for employee details
+const firstName = window.prompt('Enter First Name:');
+const lastName = window.prompt('Enter Last Name:');
+let salary = parseFloat(window.prompt('Enter Salary:')); // Use let instead of const
+// If salary is not a number, set it to 0
+if (isNaN(salary)) {
+    salary = 0;
+}
 
     // Create an object for employee data
     const employeeData = { firstName, lastName, salary };
